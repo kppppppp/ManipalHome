@@ -1,0 +1,77 @@
+.Container {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensures the content is vertically aligned */
+    text-align: center; /* Centers all text in the container */
+}
+
+.box {
+    padding: 80px;
+    border: 4px solid orangered ; 
+    border-radius: 10px;
+    
+  
+    width: 100%; /* Make the width responsive */
+    max-width: 1200px; /* Restricts the width */
+}
+
+.heading h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.d-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures the boxes wrap on smaller screens */
+    gap: 20px; /* Adds space between the items */
+}
+
+.f-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 250px; /* Ensures each box has a minimum width */
+}
+
+.f-img img {
+    width: 100%;
+    max-width: 250px; /* Restricting the maximum size of images */
+    height: auto; /* Ensures aspect ratio is maintained */
+    border-radius: 10px;
+}
+
+.f-img h6 {
+    margin-top: 20px;
+    background: linear-gradient(353deg, rgba(0,0,0,1) 0%, rgba(21,209,204,1) 95%, rgba(0,212,255,1) 100%);
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .d-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box{
+        padding: 10px;
+    }
+    .f-box {
+        min-width: 100%; /* Ensures each box takes up full width */
+    }
+    .d-box{
+        padding: 20px;
+    }
+    .Container{
+        padding: 10px;
+    }
+}
+.or{
+    color: orangered;
+}

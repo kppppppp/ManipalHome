@@ -1,0 +1,105 @@
+.student-carousel-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .student-card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+  }
+  
+  .student-card-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  
+  .student-card {
+    min-width: 250px; /* Ensures cards appear side by side */
+    max-width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .student-card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .student-card-body {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .student-name {
+    color: #ff6600;
+    font-weight: bold;
+    font-size: 1rem; /* Added to prevent overlap */
+    margin-bottom: 5px; /* Added margin for better spacing */
+  }
+  
+  .student-program,
+  .student-batch {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .student-description {
+    font-size: 0.8rem;
+    color: #333;
+  }
+  
+  .student-read-more {
+    color: #ff6600;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+  
+  .scroll-button-left, .scroll-button-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+  }
+  
+  .scroll-button-left {
+    left: 10px;
+  }
+  
+  .scroll-button-right {
+    right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .student-card-container {
+      gap: 15px;
+    }
+  
+    .student-card {
+      min-width: 200px;
+      max-width: 200px;
+    }
+  }
+  

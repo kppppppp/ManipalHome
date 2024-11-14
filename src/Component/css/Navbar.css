@@ -1,0 +1,52 @@
+/* Navbar General Styles */
+.custom-navbar {
+  background-color: #fff;
+
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  height: 60px;
+}
+
+.btn {
+  color: white;
+  background: linear-gradient(90deg, #fb741a 0%, #ff5204 0%, #ff270d 100%);
+  border: none;
+  height: 55px;
+  width: 200px;
+}
+
+.btn:hover {
+  background-color: #ff4a1e;
+  
+}
+
+.nav-link {
+  color: black;
+}
+
+/* Remove fixed-top class on smaller screens */
+@media (max-width: 992px) {
+  .custom-navbar {
+    position: static;
+  }
+}
+
+/* Adjust the navbar elements alignment on smaller screens */
+@media (max-width: 576px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn{
+    width: 100%;
+  }
+  .navbar-logo {
+    margin-left: 0;
+  }
+
+  .navbar-toggler {
+    margin-right: 0;
+  }
+}

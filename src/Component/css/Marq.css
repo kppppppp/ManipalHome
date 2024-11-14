@@ -1,0 +1,46 @@
+.marquee-container {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #cf6400, #0d1b6b); /* Orange to dark blue gradient */
+    padding: 25px 30px; /* Increased padding for height */
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 60px; /* Increased height */
+  }
+  
+  .fixed-text {
+    margin-right: 50px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 768px) {
+    .marquee-container{
+      padding: 0;
+    }
+    .fixed-text{
+      font-size: 15px;
+      margin-right: 30px;
+      margin-left: 0px;
+    }
+    }
+  .marquee {
+    overflow: hidden;
+    flex: 1;
+  }
+  
+  .marquee p {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 25s linear infinite; /* Slowed down the speed by increasing duration */
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  

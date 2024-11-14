@@ -1,0 +1,121 @@
+/* New Split container styling */
+.new-split-cont {
+    display: flex;
+    padding: 20px;
+    
+    max-width: 1200px;
+    margin: auto;
+    position: relative; /* Added to position image relative to this container */
+  }
+  
+  /* Left column styling */
+  .new-left-cont {
+    flex: 0 1 60%; /* Takes up 60% of the space */
+    background-color: #b3d9ff; /* Light blue */
+    padding: 60px;
+    bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    position: relative; /* Required to ensure the image overlaps correctly */
+  }
+  
+  .new-left-cont h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .new-left-cont ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .new-left-cont li {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+  
+  /* Right column styling */
+  .new-right-cont {
+    flex: 0 1 40%; /* Takes up 40% of the space */
+    background: rgb(0,2,23);
+    background: linear-gradient(0deg, rgba(0,2,23,1) 0%, rgba(1,6,93,1) 51%, rgba(3,10,194,0.8463760504201681) 100%);
+    color: white;
+    padding: 60px;
+    
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    position: relative; /* To ensure it aligns with the image */
+  }
+  
+  .new-right-cont h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .new-right-cont h6 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* Image overlay styling */
+  .image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Position at the boundary between left and right div */
+    transform: translateY(-50%); /* To vertically center the image */
+    z-index: 1; /* Ensure the image appears above the content */
+  }
+  
+  .overlay-img {
+    width: 200px; /* Adjust width according to your image size */
+    height: 200%;
+  }
+  
+  /* Mobile responsive adjustments */
+  @media (max-width: 768px) {
+    .new-split-cont {
+      flex-direction: column; /* Stack vertically on smaller screens */
+    }
+  
+    .new-left-cont, .new-right-cont {
+      flex: 1 1 100%; /* Full width on mobile */
+    }
+  
+    .image-overlay {
+    display: none;
+    }
+    .new-left-cont{
+        padding: 10px;
+    }
+  }
+  /* Marquee styling */
+.marquee-cont {
+    margin-top: 0px;
+    overflow: hidden;
+    
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .marquee-img {
+    height: 100px; /* Adjust the image height */
+    
+    margin: 0 20px;
+  }
+  
+  marquee {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  
+  /* Optional: Responsive adjustments for marquee images */
+  @media (max-width: 768px) {
+    .marquee-img {
+      height: 50px; /* Smaller image height for mobile */
+    }
+  }
+  
